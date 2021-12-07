@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import {Accordion} from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+// import {Accordion} from "./components/Accordion/Accordion";
+// import {Rating} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 function App() {
     return (
@@ -11,7 +12,10 @@ function App() {
             <OnOff/>
             <OnOff/>
 
-            <PageTitle title={'This is Odinokun`s title'}/>
+            <UncontrolledAccordion titleValue={'Title #1'}/>
+            <UncontrolledAccordion titleValue={'Title #2'}/>
+
+            {/*<PageTitle title={'This is Odinokun`s title'}/>
             <Accordion
                 titleValue={'Accordion 1 title'}
                 collapsed={true}
@@ -21,7 +25,7 @@ function App() {
                 titleValue={'Accordion 2 title'}
                 collapsed={true}
             />
-            <Rating value={3}/>
+            <Rating value={3}/>*/}
         </div>
     );
 }
