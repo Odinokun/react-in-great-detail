@@ -9,11 +9,7 @@ function App() {
     return (
         <div className="App">
             <OnOff/>
-            <OnOff/>
-            <OnOff/>
-
             <UncontrolledAccordion titleValue={'Title #1'}/>
-            <UncontrolledAccordion titleValue={'Title #2'}/>
 
             {/*<PageTitle title={'This is Odinokun`s title'}/>
             <Accordion
