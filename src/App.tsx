@@ -7,7 +7,9 @@ import {OnOff} from "./components/OnOff/OnOff";
 function App() {
     return (
         <div className="App">
-            <OnOff on={false}/>
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
 
             <PageTitle title={'This is Odinokun`s title'}/>
             <Accordion

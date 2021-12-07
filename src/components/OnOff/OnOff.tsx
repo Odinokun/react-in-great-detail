@@ -1,42 +1,47 @@
-import React from "react";
+import React, {useState} from "react";
 
 type PropsType = {
-    on: boolean
+    // on: boolean
 }
 
 export const OnOff = (props: PropsType) => {
-    const wrapStyle={
+
+    let [on, setOn] = useState(false);
+
+    const wrapStyle = {
         display: 'flex',
         alignItems: 'center',
         marginBottom: '20px'
     }
-    const onStyle={
+    const onStyle = {
         borderRadius: '5px',
         border: '1px solid #000',
         marginRight: '10px',
         padding: '10px 25px',
-        background: props.on ? 'green' : 'white'
+        cursor: 'pointer',
+        background: on ? 'green' : 'white'
     }
-    const offStyle={
+    const offStyle = {
         borderRadius: '5px',
         border: '1px solid #000',
         marginRight: '10px',
         padding: '10px 25px',
-        background: props.on ? 'white' : 'tomato'
+        cursor: 'pointer',
+        background: on ? 'white' : 'tomato'
     }
-    const indicatorStyle={
+    const indicatorStyle = {
         width: '20px',
         height: '20px',
         borderRadius: '50%',
         border: '1px solid #000',
-        background: props.on ? 'green' : 'tomato'
+        background: on ? 'green' : 'tomato'
     }
 
     return (
         <div style={wrapStyle}>
-            <div style={onStyle}>ON</div>
-            <div style={offStyle}>OFF</div>
-            <div style={indicatorStyle}></div>
+            <div style={onStyle} onClick={() => setOn(true)}>ON</div>
+            <div style={offStyle} onClick={() => setOn(false)}>OFF</div>
+            <div style={indicatorStyle}> </div>
         </div>
     )
 }
