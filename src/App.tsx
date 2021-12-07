@@ -9,7 +9,7 @@ function App() {
             <PageTitle title={'This is Odinokun`s title'}/>
             <Accordion
                 titleValue={'Accordion 1 title'}
-                collapsed={false}
+                collapsed={true}
             />
             <Rating value={1}/>
             <Accordion
