@@ -8,11 +8,12 @@ function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    const [on, setOn] = useState(false);
 
     return (
         <div className="App">
             <PageTitle title={'This is accordion title'}/>
-            <OnOff/>
+            <OnOff on={setOn} onValue={on}/>
             {/*<UncontrolledAccordion titleValue={'Title uncontrolled'}/>*/}
             {/*<UncontrolledRating />*/}
 
