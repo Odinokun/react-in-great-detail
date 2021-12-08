@@ -20,7 +20,7 @@ function App() {
             <Accordion
                 titleValue={'Accordion 1 title'}
                 collapsed={accordionCollapsed}
-                onclick={setAccordionCollapsed}
+                onchange={() => setAccordionCollapsed(!accordionCollapsed)}
             />
             <Rating value={ratingValue} onclick={setRatingValue}/>
         </div>
