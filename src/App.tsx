@@ -3,9 +3,9 @@ import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
 import {OnOff} from "./components/OnOff/OnOff";
-import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import { UncontrolledOnOff } from './components/UncontrolledOnOff/UncontrolledOnOff';
 
 function App() {
 
@@ -15,10 +15,8 @@ function App() {
 
     return (
         <div className="App">
-            <PageTitle title={'This is accordion title'}/>
-            <OnOff on={switchOn} onchange={(on) => {
-                setSwitchOn(on)
-            }}/>
+            <PageTitle title={'This is controlled accordion'}/>
+            <OnOff on={switchOn} onchange={setSwitchOn}/>
             <Accordion
                 titleValue={'Accordion 1 title'}
                 collapsed={accordionCollapsed}
@@ -28,6 +26,7 @@ function App() {
             <br/>
             <hr/>
             <br/>
+            <PageTitle title={'This is controlled accordion'}/>
             <UncontrolledOnOff />
             <UncontrolledAccordion titleValue={'Title uncontrolled'}/>
             <UncontrolledRating />

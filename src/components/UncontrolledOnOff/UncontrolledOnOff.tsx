@@ -35,11 +35,18 @@ export const UncontrolledOnOff = (props: PropsType) => {
         border: '1px solid #000',
         background: on ? 'green' : 'tomato'
     }
+    
+    const onClicked = () => {
+        setOn(true)
+    }
+    const offClicked = () => {
+        setOn(false)
+    }
 
     return (
         <div style={wrapStyle}>
-            <div style={onStyle} onClick={()=>setOn(true)}>ON</div>
-            <div style={offStyle} onClick={()=>setOn(false)}>OFF</div>
+            <div style={onStyle} onClick={onClicked}>ON</div>
+            <div style={offStyle} onClick={offClicked}>OFF</div>
             <div style={indicatorStyle}> </div>
         </div>
     )
