@@ -3,6 +3,7 @@ import './App.css';
 import {OnOff} from "./components/OnOff/OnOff";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
         <div className="App">
             <PageTitle title={'This is accordion title'}/>
             <OnOff on={setOn} onValue={on}/>
+            <UncontrolledOnOff />
+
             {/*<UncontrolledAccordion titleValue={'Title uncontrolled'}/>*/}
             {/*<UncontrolledRating />*/}
 
