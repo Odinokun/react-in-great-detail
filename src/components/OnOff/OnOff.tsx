@@ -1,8 +1,8 @@
 import React from "react";
 
 type PropsType = {
-    on: (value: boolean) => void
-    onValue: boolean
+    on: boolean
+    onchange: (value: boolean)=>void
 }
 
 export const OnOff = (props: PropsType) => {
@@ -17,7 +17,7 @@ export const OnOff = (props: PropsType) => {
         marginRight: '10px',
         padding: '10px 25px',
         cursor: 'pointer',
-        background: props.onValue ? 'green' : 'white'
+        background: props.on ? 'green' : 'white'
     }
     const offStyle = {
         borderRadius: '5px',
@@ -25,20 +25,20 @@ export const OnOff = (props: PropsType) => {
         marginRight: '10px',
         padding: '10px 25px',
         cursor: 'pointer',
-        background: props.onValue ? 'white' : 'tomato'
+        background: props.on ? 'white' : 'tomato'
     }
     const indicatorStyle = {
         width: '20px',
         height: '20px',
         borderRadius: '50%',
         border: '1px solid #000',
-        background: props.onValue ? 'green' : 'tomato'
+        background: props.on ? 'green' : 'tomato'
     }
 
     return (
         <div style={wrapStyle}>
-            <div style={onStyle} onClick={()=>props.on(true)}>ON</div>
-            <div style={offStyle} onClick={()=>props.on(false)}>OFF</div>
+            <div style={onStyle} onClick={()=>props.onchange(true)}>ON</div>
+            <div style={offStyle} onClick={()=>props.onchange(false)}>OFF</div>
             <div style={indicatorStyle}> </div>
         </div>
     )
