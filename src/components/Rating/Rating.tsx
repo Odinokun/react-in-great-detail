@@ -20,10 +20,4 @@ type StarPropsType = {
     selected: boolean
 }
 
-function Star(props: StarPropsType) {
-    if (props.selected) {
-        return <span><b><i>star </i></b></span>
-    } else {
-        return <span>star </span>
-    }
-}
+const Star = (props:StarPropsType) => props.selected ? <span><b><i>star </i></b></span> : <span>star </span>
