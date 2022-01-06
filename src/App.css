@@ -4,3 +4,7 @@
     background-color: #fff;
     padding: 30px 60px;
 }
+
+.star {
+    cursor: pointer;
+}
